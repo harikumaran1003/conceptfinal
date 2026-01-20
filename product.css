@@ -141,7 +141,7 @@ body {
 .header-container {
   max-width: 1400px;
   margin: auto;
-  padding: 16px 30px;
+  padding: 10px;
   display: flex;
   align-items: center;
 }
@@ -500,3 +500,4 @@ p strong{
   margin-left: 20px;
   white-space: nowrap;
 }
+
