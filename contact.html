@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Concept Enterprises</title>
+    <link rel="icon" type="image/png" href="images/title.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Concept Enterprises">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+
+        <a href="contact.html#contact" class="btn">Get a Quote</a>
+        <div class="menu-toggle">☰</div>
+        
+
+
+    </div>
+</header>
+
+<body>
+
+    <!-- WhatsApp Floating -->
+    <a href="https://wa.me/917010957138?text=Hello%20Concept%20Enterprises,%20I%20need%20industrial%20solution"
+        class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <!-- ================= HERO ================= -->
+    <section class="product-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Contact Us</h1>
+    <p>
+      Let’s Build Something Strong Together
+    </p>
+
+    <div class="hero-buttons">
+  <a href="#products-section" class="btn primary-btn">
+    Explore Products
+  </a>
+
+  <a href="images/clients/conceptenterprises.pdf"
+     class="btn secondary-btn"
+     download>
+    <i class="fa-solid fa-download"></i>
+    Download Brochure
+  </a>
+</div>
+
+  </div>
+</section>
+    <!-- =========== CONTACT =========== -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+
+            <!-- Contact Info -->
+            <div class="contact-info" data-aos="fade-right">
+                <h1 style="padding-top:0%;">FOUNDERS</h1>
+                <h3 style="padding-bottom: 10px">message</h3>
+                <p><b>JS Group of companies / Concept Enterprises</b> Based in Hosur established in the year of 2015.
+                </p>
+                <p><b>Lakshana Enterprises,</b> Based in chennai established in the year 2023 by Aspiring <b>Founder and
+                        CEO Mr. J.JOHN SAKAYARAJ</b> with professional experience of 15 years in different fields and
+                    with carious Multinational Companies, He had made this establishment to make a successful
+                    organization by providing Various Solurions like surface Coating. Surface Conditioning, Surface
+                    Preparation Process With Latest Cutting edge Technologies.</p>
+                <p>Our Solutions are suitable across Various Industries and Workplace For different applications</p>
+                <p>JS Group had partnered with Reputed International companies to provide Smart, Productive, and
+                    Environment-Friendly Systems and Solutions to Our Customers</p>
+
+            </div>
+
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/xvgeewya" method="POST" class="contact-form" id="contactForm"
+                data-aos="fade-left">
+                <h2>Send Us a Message</h2>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" required>
+                <textarea name="message" placeholder="Your Requirement" required></textarea>
+
+                <button type="submit" class="btn">Send Enquiry</button>
+            </form>
+
+        </div>
+    </section>
+    <button id="goTopBtn" aria-label="Go to top">
+        ↑
+    </button>
+    
+        <script>
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.nav');
+
+            toggle.onclick = () => nav.classList.toggle('active');
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        </script>
+        <script src="script.js"></script>
+        <script>
+            const goTopBtn = document.getElementById("goTopBtn");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    goTopBtn.style.display = "block";
+                } else {
+                    goTopBtn.style.display = "none";
+                }
+            });
+
+            goTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        </script>
