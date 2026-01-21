@@ -756,7 +756,7 @@ section {
 /* ================= MOBILE ================= */
 
 .menu-toggle {
-  font-size: 20px;
+  font-size: 28px;
   cursor: pointer;
   color: #fff;   /* header text color */
 }
@@ -1088,6 +1088,5 @@ section {
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
-
 
 
