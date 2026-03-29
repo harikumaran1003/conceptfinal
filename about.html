@@ -9,34 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
 </head>
 <!-- HEADER -->
 <header class="header">
-        <div class="container">
+    <div class="container">
 
-            <div class="logo">
-                <img src="images/logo.png" alt="Concept Enterprises Logo">
-            </div>
-
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-
-                </ul>
-            </nav>
-
-            <a href="contact.html#contact" class="btn">Get a Quote</a>
-
-            <div class="menu-toggle">☰</div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Concept Enterprises Logo">
         </div>
-    </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+
+        <a href="contact.html#contact" class="btn">Get a Quote</a>
+
+        <div class="menu-toggle">☰</div>
+    </div>
+</header>
 
 
 <body>
@@ -47,30 +46,29 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <!-- HERO SECTION -->
-<section class="product-hero">
-  <div class="hero-overlay"></div>
+    <section class="product-hero">
+        <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <h1>About Us</h1>
-    <p>
-      Concept Enterprises is built on quality, integrity, and a commitment to delivering strong, reliable construction solutions
-    </p>
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p>
+                Concept Enterprises is built on quality, integrity, and a commitment to delivering strong, reliable
+                construction solutions
+            </p>
 
-    <div class="hero-buttons">
-  <a href="#products-section" class="btn primary-btn">
-    Explore Products
-  </a>
+            <div class="hero-buttons">
+                <a href="#products-section" class="btn primary-btn">
+                    Explore Products
+                </a>
 
-  <a href="images/clients/conceptenterprises.pdf"
-     class="btn secondary-btn"
-     download>
-    <i class="fa-solid fa-download"></i>
-    Download Brochure
-  </a>
-</div>
+                <a href="images/clients/conceptenterprises.pdf" class="btn secondary-btn" download>
+                    <i class="fa-solid fa-download"></i>
+                    Download Brochure
+                </a>
+            </div>
 
-  </div>
-</section>
+        </div>
+    </section>
     <!-- ================= ABOUT ================= -->
     <section class="about" data-aos="fade-right" id="about">
         <div class="container about-grid">
@@ -156,35 +154,67 @@
 
     </section>
 
+    <!-- Counter Animation -->
     <script>
-            const toggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.nav');
+        function animateCounter(el, target, suffix, duration) {
+            let start = 0;
+            const interval = Math.max(10, Math.floor(duration / target));
+            const timer = setInterval(() => {
+                start++;
+                el.textContent = start + suffix;
+                if (start >= target) clearInterval(timer);
+            }, interval);
+        }
 
-            toggle.onclick = () => nav.classList.toggle('active');
-        </script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-        </script>
-        <script src="script.js"></script>
-        <script>
-            const goTopBtn = document.getElementById("goTopBtn");
-
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 300) {
-                    goTopBtn.style.display = "block";
-                } else {
-                    goTopBtn.style.display = "none";
-                }
-            });
-
-            goTopBtn.addEventListener("click", () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        document.querySelectorAll('.count').forEach(el => {
+                            const raw = el.textContent.trim();
+                            const suffix = raw.replace(/[0-9]/g, '');
+                            const target = parseInt(raw);
+                            el.textContent = '0' + suffix;
+                            animateCounter(el, target, suffix, 1500);
+                        });
+                        observer.unobserve(statsSection);
+                    }
                 });
+            }, { threshold: 0.3 });
+            observer.observe(statsSection);
+        }
+    </script>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        toggle.onclick = () => nav.classList.toggle('active');
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        const goTopBtn = document.getElementById("goTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+
+        goTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
             });
-        </script>
+        });
+    </script>
