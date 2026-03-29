@@ -9,9 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
 </head>
 <!-- HEADER -->
 <header class="header">
@@ -26,14 +25,14 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
 
             </ul>
         </nav>
 
         <a href="contact.html#contact" class="btn">Get a Quote</a>
         <div class="menu-toggle">☰</div>
-        
+
 
 
     </div>
@@ -48,29 +47,27 @@
     </a>
     <!-- ================= HERO ================= -->
     <section class="product-hero">
-  <div class="hero-overlay"></div>
+        <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <h1>Contact Us</h1>
-    <p>
-      Let’s Build Something Strong Together
-    </p>
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>
+                Let’s Build Something Strong Together
+            </p>
 
-    <div class="hero-buttons">
-  <a href="#products-section" class="btn primary-btn">
-    Explore Products
-  </a>
+            <div class="hero-buttons">
+                <a href="#products-section" class="btn primary-btn">
+                    Explore Products
+                </a>
 
-  <a href="images/clients/conceptenterprises.pdf"
-     class="btn secondary-btn"
-     download>
-    <i class="fa-solid fa-download"></i>
-    Download Brochure
-  </a>
-</div>
+                <a href="images/clients/conceptenterprises.pdf" class="btn secondary-btn" download>
+                    <i class="fa-solid fa-download"></i>
+                    Download Brochure
+                </a>
+            </div>
 
-  </div>
-</section>
+        </div>
+    </section>
     <!-- =========== CONTACT =========== -->
     <section class="contact" id="contact">
         <div class="container contact-grid">
@@ -109,36 +106,36 @@
     <button id="goTopBtn" aria-label="Go to top">
         ↑
     </button>
-    
-        <script>
-            const toggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.nav');
 
-            toggle.onclick = () => nav.classList.toggle('active');
-        </script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-        </script>
-        <script src="script.js"></script>
-        <script>
-            const goTopBtn = document.getElementById("goTopBtn");
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
 
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 300) {
-                    goTopBtn.style.display = "block";
-                } else {
-                    goTopBtn.style.display = "none";
-                }
-            });
+        toggle.onclick = () => nav.classList.toggle('active');
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        const goTopBtn = document.getElementById("goTopBtn");
 
-            goTopBtn.addEventListener("click", () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+
+        goTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
             });
-        </script>
+        });
+    </script>
