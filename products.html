@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Products | Concept Enterprises</title>
@@ -10,120 +11,147 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="product.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-<!-- WhatsApp Floating -->
-<a href="https://wa.me/917010957138?text=Hello%20Concept%20Enterprises"
-   class="whatsapp-float" target="_blank">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-container">
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo">
-    </div>
-
-    <nav class="nav">
-      <ul id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="products.html" class="active">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        
-      </ul>
-    </nav>
-    <a href="contact.html" class="quote-btn">Get Quote</a>
-
-    <div class="hamburger" onclick="toggleHeaderMenu()">☰</div>
-
-
-  </div>
-</header>
-<!-- HERO SECTION -->
-<section class="product-hero">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>Our Industrial Solutions</h1>
-    <p>
-      Complete turnkey solutions for surface treatment, coating,
-      material handling, clean rooms, and environmental systems.
-    </p>
-
-    <div class="hero-buttons">
-  <a href="#products-section" class="btn primary-btn">
-    Explore Products
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/917010957138?text=Hello%20Concept%20Enterprises" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <a href="images/clients/conceptenterprises.pdf"
-     class="btn secondary-btn"
-     download>
-    <i class="fa-solid fa-download"></i>
-    Download Brochure
-  </a>
-</div>
-
-  </div>
-</section>
-
-<!-- MOBILE CATEGORY BUTTON -->
-<div class="menu-btn" onclick="toggleMenu()">☰ Categories</div>
-
-<!-- MAIN CONTAINER -->
-<div class="container" id="products-section">
-
-  <!-- LEFT SIDEBAR -->
-  <div class="sidebar" id="sidebar"></div>
-
-  <!-- RIGHT CONTENT -->
-  <div class="content" >
-
-    <h4 id="categoryTitle">Select a Category</h4>
-
-    <!-- PRODUCT GRID -->
-    <div class="items-grid" id="itemsGrid"></div>
-
-    <!-- PRODUCT DETAIL -->
-    <div id="itemDetail" class="product-detail" data-aos="fade-down">
-      <h1 id="detailTitle"></h1>
-      <img id="detailImage" class="product-img" src="" alt="">
-      <div id="detailDescription"></div>
-
-      <div style="text-align:center;margin-top:20px;">
-        <button class="btn" onclick="backToList()">← Back to products</button>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Concept Enterprises Logo">
       </div>
+
+      <nav class="nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html#contact" class="quote-btn">Get a Quote</a>
+
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </div>
+  </header>
+  <!-- HERO SECTION -->
+  <section class="product-hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Our Industrial Solutions</h1>
+      <p>
+        Complete turnkey solutions for surface treatment, coating,
+        material handling, clean rooms, and environmental systems.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#products-section" class="btn primary-btn">
+          Explore Products
+        </a>
+
+        <a href="images/clients/conceptenterprises.pdf" class="btn secondary-btn" download>
+          <i class="fa-solid fa-download"></i>
+          Download Brochure
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOBILE CATEGORY BUTTON -->
+  <div class="menu-btn" onclick="toggleMenu()">☰ Categories</div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="products-wrapper" id="products-section">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar" id="sidebar"></div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+
+      <h4 id="categoryTitle">Select a Category</h4>
+
+      <!-- PRODUCT GRID -->
+      <div class="items-grid" id="itemsGrid"></div>
+
+      <!-- PRODUCT DETAIL -->
+      <div id="itemDetail" class="product-detail" data-aos="fade-down">
+        <h1 id="detailTitle"></h1>
+        <img id="detailImage" class="product-img" src="" alt="">
+        <div id="detailDescription"></div>
+
+        <div style="text-align:center;margin-top:20px;">
+          <button class="btn" onclick="backToList()">← Back to products</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+
+      <!-- Contact -->
+      <div class="footer-col address">
+        <h4>Contact</h4>
+        <p>📞 +91 91501 82430</p>
+        <p>✉ conceptenterprises23@gmail.com</p>
+        <p>📍 No 5/516 plot No 48, Annamalai Nagar First Cross Dharga,<br>
+          Hosur-635126, Tamil Nadu</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col quick-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col footer-social-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919150182430" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-</div>
-<footer class="site-footer">
-  <div class="footer-container">
-    <p>
-                    © 2026 Concept Enterprises. All Rights Reserved.<br>
-                    <a href="https://wa.me/917010957138?text=Hello%20Harikumaran%20Need%20details">
-                        Harikumaran.v
-                    </a>
-                </p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>© 2026 Concept Enterprises. All Rights Reserved.<br>
+        <a href="https://wa.me/917010957138?text=Hello%20Harikumaran%20Need%20details">Harikumaran.v</a>
+      </p>
+    </div>
+  </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
-<script>
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
 
-const products = {
-  "Pre-Treatment System":[
-    {
-  name: "Spray ",
-  image: "images/products/spray pre.jpg",
-  description: `<p>A <strong>spray pre-treatment system</strong> is a commonly used surface preparation method in the coating industry, where chemicals are sprayed onto substrates (typically metals) to clean, condition, and treat the surface before applying a coating. This system uses spray nozzles to apply cleaning agents, rinse water, and conversion coatings. It is popular in large-scale manufacturing processes such as automotive, appliances, and metal fabrication due to its efficiency and ability to process multiple parts continuously.</span></p>
+    const products = {
+      "Pre-Treatment System": [
+        {
+          name: "Spray ",
+          image: "images/products/spray pre.jpg",
+          description: `<p>A <strong>spray pre-treatment system</strong> is a commonly used surface preparation method in the coating industry, where chemicals are sprayed onto substrates (typically metals) to clean, condition, and treat the surface before applying a coating. This system uses spray nozzles to apply cleaning agents, rinse water, and conversion coatings. It is popular in large-scale manufacturing processes such as automotive, appliances, and metal fabrication due to its efficiency and ability to process multiple parts continuously.</span></p>
 <p>A spray pre-treatment system involves spraying chemical solutions onto metal surfaces to remove contaminants, apply conversion coatings, and prepare the surface for coating. This system is typically automated and used in continuous production lines.</p>
 <p>Concept Enterprises Pvt Ltd embarked on a journey in the manufacturing industry for Surface Coating Plants and Equipment. In less than two decades, we have become the leading genus in Designing, Manufacturing, Supplying and Exporting a wide range of Pre-Treatment Plant, Pre-Treatment Manufacturer, Pre-Treatment Solutions, Powder Coating Plant, Paint Booth Manufacturer, Industrial Oven Manufacturer, Curing Oven Manufacturer, Material Handling Equipment, Conveyor Suppliers, Industrial Ducting Suppliers, and Shot Blasting System.</p>
 <h3>Benefits of Spray Pre-Treatment System:</h3>
@@ -143,11 +171,11 @@ const products = {
 
 <p>Further, to attain maximum satisfaction of clients, we provide after sales service with the help of our trained and experienced engineers. Our vast industry experience and in-depth knowledge have helped us in acquiring huge base of clients not only in India but also in overseas countries like UAE, Bahrain, Qatar, Quwait, Africa, and Oman.</p>
 `
-},
-{
-  name: "DIP / Immersion ",
-  image: "images/products/dip.jpg",
-  description: `<p>A <strong>dip/immersion cleaning system</strong> is a widely used pre-treatment method in the coating industry, where parts or materials are submerged in a series of chemical baths for cleaning and surface preparation. This system is effective for treating complex geometries, large components, or parts with cavities that may be difficult to clean using other methods like spraying. The immersion process ensures thorough cleaning and application of conversion coatings, making it ideal for industries such as automotive, aerospace, and heavy machinery.</p>
+        },
+        {
+          name: "DIP / Immersion ",
+          image: "images/products/dip.jpg",
+          description: `<p>A <strong>dip/immersion cleaning system</strong> is a widely used pre-treatment method in the coating industry, where parts or materials are submerged in a series of chemical baths for cleaning and surface preparation. This system is effective for treating complex geometries, large components, or parts with cavities that may be difficult to clean using other methods like spraying. The immersion process ensures thorough cleaning and application of conversion coatings, making it ideal for industries such as automotive, aerospace, and heavy machinery.</p>
 <p>In a dip/immersion cleaning system, parts are submerged in chemical baths that remove contaminants (e.g., oil, dirt, rust) and apply protective coatings. The process involves multiple stages, including cleaning, rinsing, surface activation, and conversion coating. It is ideal for handling large or intricately shaped parts.</p>
 <p><strong>Concept Enterprises Pvt Ltd</strong> embarked on a journey in the manufacturing industry for Surface Coating Plants and Equipment. In less than two decades, we have become the leading genus in Designing, Manufacturing, Supplying and Exporting a wide range of Pre-Treatment Plant, DIP Pre-Treatment, Pre-Treatment Manufacturer, Powder Coating Plant, Paint Booth Manufacturer, Industrial Oven Manufacturer, Curing Oven Manufacturer, Material Handling Equipment, Conveyor Suppliers, Industrial Ducting Suppliers, and Shot Blasting System.</p>
  <h3>Benefits of Dip / Immersion Pre-Treatment System</h3>
@@ -180,11 +208,11 @@ const products = {
 <p>Further, to attain maximum satisfaction of clients, we provide after sales service with the help of our trained and experienced engineers. Our vast industry experience and in-depth knowledge have helped us in acquiring huge base of clients not only in India but also in overseas countries like UAE, Bahrain, Qatar, Quwait, Africa, and Oman.</p>
 
 `
-},
-{
-  name: "Flame",
-  image: "images/products/flame.jpg",
-  description: `<p>A <strong>Flame pre-treatment</strong> is a surface preparation technique used in the coating industry, where a controlled flame is applied to the surface of a substrate (typically plastics or composites) to improve its adhesion properties. The heat from the flame oxidizes the surface and increases its surface energy, making it more receptive to coatings, adhesives, or inks. This method is commonly used for materials with low surface energy, such as polyethylene, polypropylene, or other plastics, which are traditionally challenging to coat without pre-treatment.</p>
+        },
+        {
+          name: "Flame",
+          image: "images/products/flame.jpg",
+          description: `<p>A <strong>Flame pre-treatment</strong> is a surface preparation technique used in the coating industry, where a controlled flame is applied to the surface of a substrate (typically plastics or composites) to improve its adhesion properties. The heat from the flame oxidizes the surface and increases its surface energy, making it more receptive to coatings, adhesives, or inks. This method is commonly used for materials with low surface energy, such as polyethylene, polypropylene, or other plastics, which are traditionally challenging to coat without pre-treatment.</p>
 <p>Flame pre-treatment involves exposing the surface of a substrate to a controlled, high-temperature flame. The flame alters the chemical structure of the surface, increasing its wettability and surface energy, making it more suitable for coating or adhesion. It is particularly effective for non-metallic surfaces like plastics.</p>
 <p><strong>Concept Enterprises Pvt Ltd</strong> embarked on a journey in the manufacturing industry for Surface Coating Plants and Equipment. In less than two decades, we have become the leading genus in Designing, Manufacturing, Supplying and Exporting a wide range of Pre-Treatment Plant, DIP Pre-Treatment, Pre-Treatment Manufacturer, Powder Coating Plant, Paint Booth Manufacturer, Industrial Oven Manufacturer, Curing Oven Manufacturer, Material Handling Equipment, Conveyor Suppliers, Industrial Ducting Suppliers, and Shot Blasting System.</p>
  <h3>Benefits of Flame Pre-Treatment System</h3>
@@ -212,11 +240,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 <p>Further, to attain maximum satisfaction of clients, we provide after sales service with the help of our trained and experienced engineers. Our vast industry experience and in-depth knowledge have helped us in acquiring huge base of clients not only in India but also in overseas countries like UAE, Bahrain, Qatar, Quwait, Africa, and Oman.</p>
 
 `
-},
-{
-  name: "Ionization ",
-  image: "images/products/ionization.jpg",
-  description: `<p>
+        },
+        {
+          name: "Ionization ",
+          image: "images/products/ionization.jpg",
+          description: `<p>
   <strong>Ionization pre-treatment</strong> is a surface preparation process used in the coating industry to neutralize static charges on the surface of a substrate, ensuring proper adhesion of coatings such as paints, powders, or adhesives. Static electricity often attracts dust, debris, and contaminants, which can lead to coating defects. By applying ionized air to the surface, ionization pre-treatment removes static buildup, cleans the surface, and enhances coating adhesion. This method is especially effective for non-conductive materials like plastics, composites, and certain metals.
 </p>
 
@@ -263,12 +291,12 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}],
-  "Powder Coating System":[
-{
-  name: "Automatic Powder Coating System",
-  image: "images/products/auto powder coating.jpg",
-  description: `<p>
+        }],
+      "Powder Coating System": [
+        {
+          name: "Automatic Powder Coating System",
+          image: "images/products/auto powder coating.jpg",
+          description: `<p>
   <strong>Powder coating</strong> is a dry finishing process widely used in the coating industry. It involves applying a fine powder composed of pigments and resins onto a substrate, usually metal. The powder is electrostatically charged, allowing it to adhere evenly to the surface. After application, the coated part is heated in a curing oven, where the powder melts and forms a smooth, durable, and high-quality finish. Powder coating is well known for its environmental benefits, durability, and cost-effectiveness, making it a preferred choice across various industries.
 </p>
 
@@ -315,11 +343,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Semi-Automatic Powder Coating System",
-  image: "images/products/semi pc.png",
-  description: `<p>
+        },
+        {
+          name: "Semi-Automatic Powder Coating System",
+          image: "images/products/semi pc.png",
+          description: `<p>
   A <strong>Semi-Automatic Powder Coating System</strong> combines elements of both manual and automatic coating processes. In this system, operators perform tasks such as loading and unloading components, while automated equipment like spray guns or reciprocators applies the powder coating. The process is controlled through preset programs that regulate powder application, ensuring consistent coating quality while still allowing operators to manually adjust settings or coat areas that require special attention. This system is ideal for medium-scale production and offers a balance between automation and manual flexibility.
 </p>
 
@@ -366,11 +394,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Batch Type Powder Coating System",
-  image: "images/products/batch pc.jpg",
-  description: `<p>
+        },
+        {
+          name: "Batch Type Powder Coating System",
+          image: "images/products/batch pc.jpg",
+          description: `<p>
   <strong>Batch Type Powder Coating Systems</strong> are designed for coating small to medium-sized production volumes or customized items using a batch process. Unlike continuous or conveyor-based systems, batch powder coating allows components to be processed in groups, offering high flexibility to accommodate different part sizes, shapes, and production quantities. In this process, electrostatically charged powder is applied to the components, which are then cured in an oven to form a durable, high-quality finish. This system is ideal for job shops, small manufacturing units, and applications where versatility is essential.
 </p>
 
@@ -417,12 +445,12 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}],
-  "Paint Booth System":[
-{
-  name: "Automatic / Conveyorised",
-  image: "images/products/autopb.jpg",
-  description: `<p>
+        }],
+      "Paint Booth System": [
+        {
+          name: "Automatic / Conveyorised",
+          image: "images/products/autopb.jpg",
+          description: `<p>
   An <strong>Automatic / Conveyorized Paint Finishing System</strong> is an advanced coating solution designed to efficiently apply liquid paint to products as they move along a conveyor line. This system integrates multiple stages such as cleaning, surface preparation, priming, painting, and curing into a continuous and streamlined operation. Components are loaded onto a conveyor that carries them through automated spray booths and curing ovens, ensuring consistent coating quality. This system is ideal for high-volume production environments where uniform finishes, reduced labor costs, and maximum throughput are essential.
 </p>
 
@@ -469,11 +497,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Wet Spray",
-  image: "images/products/wetpb.jpg",
-  description: `<p>
+        },
+        {
+          name: "Wet Spray",
+          image: "images/products/wetpb.jpg",
+          description: `<p>
   A <strong>Wet Spray Paint Booth</strong> is an enclosed space designed specifically for the application of liquid coatings using spray guns. This system provides a controlled environment where surfaces can be painted efficiently while minimizing overspray and maintaining high-quality finishes. Wet spray booths are equipped with features such as ventilation systems, filters, and lighting to ensure optimal working conditions. They are widely used in various industries, including automotive, aerospace, and furniture manufacturing, for their effectiveness in applying paint uniformly and safely.
 </p>
 
@@ -520,11 +548,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Dry Spray",
-  image: "images/products/drypb.jpeg",
-  description: `<p>
+        },
+        {
+          name: "Dry Spray",
+          image: "images/products/drypb.jpeg",
+          description: `<p>
   A <strong>Dry Spray Paint Booth</strong> is a specialized enclosure designed for the application of powder coatings and certain types of fast-drying liquid coatings. Unlike traditional wet spray booths, dry spray booths utilize techniques that minimize overspray and ensure a clean and efficient coating process. These booths are equipped with advanced ventilation systems, filtration units, and dedicated mechanisms to collect and reuse overspray. They are widely used in industries such as automotive, appliance manufacturing, and metal fabrication, where consistent quality and reduced waste are essential.
 </p>
 
@@ -571,11 +599,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Spray Bake Booth (Indiana-II)",
-  image: "images/products/bakepb.jpg",
-  description: `<p>
+        },
+        {
+          name: "Spray Bake Booth (Indiana-II)",
+          image: "images/products/bakepb.jpg",
+          description: `<p>
   A <strong>Spray Bake Booth</strong> is an integrated system designed for the application and curing of liquid coatings, particularly in high-volume manufacturing environments. This booth combines both spraying and baking processes into a single enclosed unit, enabling efficient paint application followed by immediate curing through controlled heat. Spray bake booths are widely used in industries such as automotive, aerospace, and furniture manufacturing, where fast production cycles and high-quality finishes are essential.
 </p>
 
@@ -622,13 +650,13 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}
-],
-"DIP Pre-Treatment System":[
-{
-  name: "Cathodic Electro Deposition (CED Pre-Treatment)",
-  image: "images/products/ced.jpg",
-  description: `<p>
+        }
+      ],
+      "DIP Pre-Treatment System": [
+        {
+          name: "Cathodic Electro Deposition (CED Pre-Treatment)",
+          image: "images/products/ced.jpg",
+          description: `<p>
   <strong>Cathodic Electric Deposition (CED) coating</strong>, also known as electrocoating or electrophoretic painting, is an advanced coating process that uses electrical current to deposit a protective paint layer onto a substrate. This method is highly effective for coating complex geometries and ensuring uniform coverage on all surfaces. CED coating is widely used in automotive and metal industries where durability and corrosion resistance are critical.
 </p>
 
@@ -675,11 +703,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Autophoretic DIP Pre-Treatment System",
-  image: "images/products/autodip.jpg",
-  description: `<p>
+        },
+        {
+          name: "Autophoretic DIP Pre-Treatment System",
+          image: "images/products/autodip.jpg",
+          description: `<p>
   The <strong>Autophoretic DIP Coating System</strong> is an innovative coating process that utilizes the principles of autophoretic deposition to apply a protective layer onto substrates. This technique involves immersing the substrate in a specially formulated coating bath, where a controlled chemical reaction between the solution and the substrate forms a durable and uniform coating. Autophoretic coating is particularly effective for metal surfaces and is widely used in automotive, appliance, and industrial applications.
 </p>
 
@@ -726,11 +754,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Conventional DIP Pre-Treatment System",
-  image: "images/products/convenrdip.jpg",
-  description: `<p>
+        },
+        {
+          name: "Conventional DIP Pre-Treatment System",
+          image: "images/products/convenrdip.jpg",
+          description: `<p>
   A <strong>Conventional DIP Coating System</strong> is a traditional coating method used to apply liquid coatings to substrates through immersion. In this process, components are submerged into a liquid coating material, allowing uniform coverage on all surfaces. After immersion, the coated items are withdrawn and cured to enhance the coating’s performance. This system is widely used in industries such as automotive, electronics, and consumer goods due to its simplicity, reliability, and effectiveness.
 </p>
 
@@ -777,13 +805,13 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}
-],
-  "Industrial Ovens / Curing Ovens":[
-    {
-  name: "Paint Baking Oven",
-  image: "images/products/paint.jpg",
-  description: `<p>
+        }
+      ],
+      "Industrial Ovens / Curing Ovens": [
+        {
+          name: "Paint Baking Oven",
+          image: "images/products/paint.jpg",
+          description: `<p>
   <strong>Paint Baking Ovens</strong> or <strong>Powder Curing Ovens</strong> are specialized thermal processing systems used in the coating industry to cure paint and powder coatings on various substrates. These ovens provide a controlled environment with precise temperature regulation and airflow, which is essential for achieving proper curing and high-quality finishes. They are widely used in industries such as automotive, appliances, furniture, and industrial manufacturing where durability and finish quality are critical.
 </p>
 
@@ -830,11 +858,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Powder Curing Oven",
-  image: "images/products/powderover.jpg",
-  description: `<p>
+        },
+        {
+          name: "Powder Curing Oven",
+          image: "images/products/powderover.jpg",
+          description: `<p>
   A <strong>Powder Curing Oven</strong> is a specialized industrial oven designed to cure powder-coated components with high efficiency and precision. Widely used in the coating industry, this oven ensures smooth, durable, and high-quality finishes on both metal and non-metal surfaces. During the curing process, the powder-coated parts are heated to a specific temperature, causing the powder to melt, flow, and chemically bond, forming a hard and resilient coating that delivers excellent protection and appearance.
 </p>
 
@@ -881,11 +909,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "UV Drying Oven",
-  image: "images/products/uv.jpg",
-  description: `<p>
+        },
+        {
+          name: "UV Drying Oven",
+          image: "images/products/uv.jpg",
+          description: `<p>
   <strong>UV Drying Ovens</strong> are specialized curing systems designed to use ultraviolet (UV) light to rapidly cure and dry coatings, inks, and adhesives. These ovens are widely used in the coating industry due to their ability to deliver fast and efficient curing, making them ideal for applications such as printing, automotive, electronics, and packaging. UV drying technology is particularly beneficial for processes that demand quick turnaround times and high-quality finishes.
 </p>
 
@@ -932,11 +960,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Force Drying Oven",
-  image: "images/products/forceoven.jpg",
-  description: `<p>
+        },
+        {
+          name: "Force Drying Oven",
+          image: "images/products/forceoven.jpg",
+          description: `<p>
   <strong>Force Drying Ovens</strong> are specialized heating systems designed to accelerate the drying and curing of various coatings such as paints, varnishes, and adhesives. By using forced air circulation along with controlled heating elements, these ovens create a uniform thermal environment that ensures consistent drying results on different substrates. Force drying ovens are widely used in industries including automotive, aerospace, manufacturing, and furniture, where efficient production cycles and high-quality finishes are essential.
 </p>
 
@@ -983,11 +1011,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Lacquer Dryer",
-  image: "images/products/lacquer.jpg",
-  description: `<p>
+        },
+        {
+          name: "Lacquer Dryer",
+          image: "images/products/lacquer.jpg",
+          description: `<p>
   <strong>Lacquer Dryers</strong> are specialized drying systems designed to accelerate the drying and curing of lacquer coatings. These systems are essential in the coating industry where fast drying times and high-quality surface finishes are critical. Lacquer dryers are widely used in industries such as automotive, furniture, and musical instrument manufacturing, where lacquer coatings are preferred for their visual appeal and protective properties.
 </p>
 
@@ -1034,13 +1062,13 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}
-],
-  "Material Handling System":[
-{
-  name: "Overhead I Beam Conveyor",
-  image: "images/products/ibeam.png",
-  description: `<p>
+        }
+      ],
+      "Material Handling System": [
+        {
+          name: "Overhead I Beam Conveyor",
+          image: "images/products/ibeam.png",
+          description: `<p>
   <strong>Overhead I Beam Conveyors</strong> are advanced material handling systems designed to transport components through various stages of the coating and finishing process. These conveyors use an overhead I-beam track structure, enabling efficient movement of products while freeing up valuable floor space. They are especially beneficial in facilities where space optimization is critical and are widely used in automotive, aerospace, and manufacturing industries for handling large and heavy components with precision.
 </p>
 
@@ -1087,11 +1115,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Power Roller Conveyor",
-  image: "images/products/powerroller.png",
-  description: `<p>
+        },
+        {
+          name: "Power Roller Conveyor",
+          image: "images/products/powerroller.png",
+          description: `<p>
   <strong>Power Roller Conveyors</strong> are advanced material handling systems designed to transport products efficiently throughout the coating process. These conveyors use powered rollers to move items along a defined conveyor path, enabling smooth and controlled movement. Power roller conveyors are especially useful in industries such as automotive, aerospace, and general manufacturing, where high-speed transport and precise handling are essential. Their versatility allows them to handle a wide range of products, from small components to large assemblies.
 </p>
 
@@ -1138,11 +1166,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Stop and Go Conveyor",
-  image: "images/products/stop.png",
-  description: `<p>
+        },
+        {
+          name: "Stop and Go Conveyor",
+          image: "images/products/stop.png",
+          description: `<p>
   <strong>Stop and Go Conveyors</strong> are specialized material handling systems designed to enable intermittent movement of products throughout the coating process. Unlike continuous conveyor systems, these conveyors allow products to move in a controlled manner and stop at specific stations for coating application, inspection, or curing. This controlled movement is especially valuable in the coating industry, where precise timing and positioning are essential to achieve high-quality finishes.
 </p>
 
@@ -1189,11 +1217,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "High-Speed Chain Conveyor",
-  image: "images/products/highspeed.png",
-  description: `<p>
+        },
+        {
+          name: "High-Speed Chain Conveyor",
+          image: "images/products/highspeed.png",
+          description: `<p>
   <strong>High-Speed Chain Conveyors</strong> are specialized material handling systems designed to transport products rapidly through various stages of the coating process. Using a chain-driven mechanism, these conveyors provide a reliable and efficient solution for moving items quickly and smoothly. They are ideally suited for high-throughput environments such as automotive, aerospace, and manufacturing industries. Their robust construction and capability to handle heavy loads make them well suited for fast-paced production lines.
 </p>
 
@@ -1239,11 +1267,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Closed Track Chain Conveyor",
-  image: "images/products/closedtrack.jpg",
-  description: `<p>
+        },
+        {
+          name: "Closed Track Chain Conveyor",
+          image: "images/products/closedtrack.jpg",
+          description: `<p>
   <strong>Closed Track Chain Conveyors</strong> are specialized material handling systems designed to transport products in a closed-loop configuration. This design enables smooth and efficient movement of items through various stages of the coating process, making them well suited for high-volume manufacturing environments such as automotive, aerospace, and general industrial applications. The enclosed track structure minimizes wear on transported products while maximizing space utilization.
 </p>
 
@@ -1290,11 +1318,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Overhead Manual Conveyor Track and Trolley",
-  image: "images/products/overhead.jpeg",
-  description: `<p>
+        },
+        {
+          name: "Overhead Manual Conveyor Track and Trolley",
+          image: "images/products/overhead.jpeg",
+          description: `<p>
   <strong>Overhead Manual Conveyor Track and Trolley Systems</strong> are material handling solutions designed to transport products efficiently through the coating process using a simple and flexible design. These systems consist of an overhead rail track with manually operated trolleys that move products along the line. They are especially suitable for handling smaller or lighter components in environments where manual control and flexibility are preferred.
 </p>
 
@@ -1341,11 +1369,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-} ,
-{
-  name: "Flight-bar Conveyor",
-  image: "images/products/flightbar.png",
-  description: `<p>
+        },
+        {
+          name: "Flight-bar Conveyor",
+          image: "images/products/flightbar.png",
+          description: `<p>
   <strong>Flight-Bar Conveyors</strong> are specialized material handling systems designed for the efficient transport of products through various stages of the coating process. This conveyor type uses flat or curved bars, known as flight bars, attached to a chain to ensure stable and controlled movement of products across horizontal, inclined, and vertical paths. Flight-bar conveyors are especially suitable for applications where consistent product orientation and secure handling are critical, such as automotive, aerospace, and industrial coating operations.
 </p>
 
@@ -1392,11 +1420,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-} ,
-{
-  name: "Inverted/Floor Chain Conveyor",
-  image: "images/products/inverted.png",
-  description: `<p>
+        },
+        {
+          name: "Inverted/Floor Chain Conveyor",
+          image: "images/products/inverted.png",
+          description: `<p>
   <strong>Inverted / Floor Chain Conveyors</strong> are specialized material handling systems designed to transport products through various stages of the coating process. These conveyors use a chain-driven mechanism to move items along a defined path, either suspended from above in an inverted configuration or supported at floor level. They are widely used in the coating industry to manage material flow in a structured and space-efficient manner, where precise movement and handling are essential for achieving high-quality finishes.
 </p>
 
@@ -1443,12 +1471,12 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}  ],
-  "Environmental Technology":[
-    {
-  name: "Effluent Treatment Plant (ETP)",
-  image: "images/products/effluent.png",
-  description: `<p>
+        }],
+      "Environmental Technology": [
+        {
+          name: "Effluent Treatment Plant (ETP)",
+          image: "images/products/effluent.png",
+          description: `<p>
   <strong>Effluent Treatment Plants (ETP)</strong> are essential systems designed to treat wastewater generated during coating and surface finishing processes across various industries. These plants remove contaminants such as heavy metals, solvents, oils, and chemicals, ensuring that treated effluent meets environmental and regulatory standards before discharge. ETPs play a vital role in reducing the environmental impact of coating operations and supporting sustainable industrial practices.
 </p>
 
@@ -1495,11 +1523,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Fresh Air Exhaust System",
-  image: "images/products/freshair.jpg",
-  description: `<p>
+        },
+        {
+          name: "Fresh Air Exhaust System",
+          image: "images/products/freshair.jpg",
+          description: `<p>
   <strong>Fresh Air Exhaust Systems</strong> are essential components in the coating industry, designed to maintain a safe and efficient working environment by providing proper ventilation and controlling airborne contaminants. These systems function by supplying fresh air into the workspace while simultaneously exhausting stale air, volatile organic compounds (VOCs), and other hazardous fumes generated during coating operations. A well-designed fresh air exhaust system improves air quality, enhances worker safety, and supports efficient coating processes.
 </p>
 
@@ -1546,11 +1574,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Air Shower System",
-  image: "images/products/airshower.png",
-  description: `<p>
+        },
+        {
+          name: "Air Shower System",
+          image: "images/products/airshower.png",
+          description: `<p>
   <strong>Air Shower Systems</strong> are specialized units designed to remove dust, particles, and contaminants from personnel and materials before entering sensitive coating areas. These systems use high-velocity jets of filtered air to dislodge pollutants that could otherwise affect coating quality. Air shower systems are especially important in industries such as automotive, aerospace, and electronics manufacturing, where cleanliness is critical to achieving defect-free finishes.
 </p>
 
@@ -1597,11 +1625,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Air Ventilation System",
-  image: "images/products/ventilation.png",
-  description: `<p>
+        },
+        {
+          name: "Air Ventilation System",
+          image: "images/products/ventilation.png",
+          description: `<p>
   <strong>Air Ventilation Systems</strong> are essential components in the coating industry, responsible for regulating and distributing air throughout production and coating areas. These systems manage the intake, filtration, conditioning, and exhaust of air to maintain optimal environmental conditions for coating processes. By controlling temperature, humidity, and air quality, air ventilation systems play a critical role in improving coating efficiency and finish quality.
 </p>
 
@@ -1643,12 +1671,12 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
   <strong>Concept Enterprises Pvt Ltd</strong>, we have grown into offering end-to-end solutions in the field of Surface Coatings, beginning with Consultancy, Designing, Engineering, and Commissioning of tailor-made systems for powder coating, liquid painting, and
 
 `
-}],
-  "Shot Blasting System":[
-{
-  name: "Wheel Shot Blasting",
-  image: "images/products/wheel.jpg",
-  description: `<p>
+        }],
+      "Shot Blasting System": [
+        {
+          name: "Wheel Shot Blasting",
+          image: "images/products/wheel.jpg",
+          description: `<p>
   <strong>Wheel Blasting Systems</strong> are advanced surface preparation solutions designed for high-speed cleaning, descaling, and finishing of metal and other durable materials. These systems use high-performance centrifugal wheels to propel abrasive media at high velocity, delivering efficient and uniform surface treatment. Engineered for heavy-duty industrial applications, wheel blasting systems ensure consistent removal of rust, scale, and contaminants, making them ideal for automotive, foundry, construction, and manufacturing industries. Their customizable configurations allow them to handle a wide variety of materials, shapes, and sizes with exceptional versatility.
 </p>
 
@@ -1707,11 +1735,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Air Blasting",
-  image: "images/products/air.jpg",
-  description: `<p>
+        },
+        {
+          name: "Air Blasting",
+          image: "images/products/air.jpg",
+          description: `<p>
   <strong>Air Blasting Systems</strong> are versatile and efficient surface treatment solutions designed for cleaning, finishing, and surface preparation using compressed air to propel abrasive media. These systems are engineered for precision and adaptability, making them suitable for a wide range of industries including aerospace, automotive, construction, and general manufacturing. From delicate polishing to heavy-duty cleaning, air blasting systems deliver consistent and reliable results while supporting sustainable and safe operations.
 </p>
 
@@ -1776,12 +1804,12 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}  ],
-  "Nano Coating Technology":[
-{
-  name: "Hydrophobic Coating",
-  image: "images/products/hydrophobic.jpg",
-  description: `<p>
+        }],
+      "Nano Coating Technology": [
+        {
+          name: "Hydrophobic Coating",
+          image: "images/products/hydrophobic.jpg",
+          description: `<p>
   <strong>Hydrophobic Coatings</strong> are advanced surface protection solutions designed to repel water, reduce moisture retention, and protect surfaces from water damage, stains, and corrosion. In today’s technologically advanced world, <strong>Concept Enterprises</strong> introduces state-of-the-art hydrophobic coating solutions that enhance surface longevity and performance. These coatings are ideal for industries such as automotive, electronics, construction, and textiles, where protection from moisture and environmental exposure is essential.
 </p>
 
@@ -1834,11 +1862,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Anti-Microbial Coating",
-  image: "images/products/Antimicrobial.jpg",
-  description: `<p>
+        },
+        {
+          name: "Anti-Microbial Coating",
+          image: "images/products/Antimicrobial.jpg",
+          description: `<p>
   <strong>Antimicrobial Coatings</strong> are advanced surface protection solutions designed to inhibit the growth of harmful microorganisms and enhance hygiene and safety in today’s fast-evolving technological landscape. <strong>Concept Enterprises Pvt Ltd</strong> introduces state-of-the-art antimicrobial coating solutions that provide long-lasting protection against bacteria, viruses, and fungi. These coatings are ideal for industries such as healthcare, electronics, food processing, and public infrastructure, where cleanliness and safety are critical.
 </p>
 
@@ -1891,11 +1919,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Hydrophilic Coating",
-  image: "images/products/Hydrophilicanti.jpg",
-  description: `<p>
+        },
+        {
+          name: "Hydrophilic Coating",
+          image: "images/products/Hydrophilicanti.jpg",
+          description: `<p>
   <strong>Hydrophilic Coatings</strong> are advanced surface treatment solutions designed to enhance water attraction, improve surface functionality, and increase operational efficiency in today’s evolving technological landscape. <strong>Concept Enterprises</strong> introduces high-performance hydrophilic coating solutions that promote uniform water spreading, reduce friction, and improve surface cleanliness. These coatings are ideal for industries such as healthcare, optics, automotive, filtration, and industrial manufacturing.
 </p>
 
@@ -1948,11 +1976,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "UV-Protective Coating",
-  image: "images/products/uv-pro.jpg",
-  description: `<p>
+        },
+        {
+          name: "UV-Protective Coating",
+          image: "images/products/uv-pro.jpg",
+          description: `<p>
   <strong>UV Protection Coatings</strong> are advanced surface protection solutions designed to safeguard materials from harmful ultraviolet (UV) radiation in today’s technology-driven world. <strong>Concept Enterprises</strong> introduces high-performance UV protection coating solutions that prevent surface degradation, discoloration, and fading while enhancing durability and visual appeal. These coatings are ideal for industries such as automotive, construction, electronics, and outdoor applications where prolonged UV exposure is a concern.
 </p>
 
@@ -2005,10 +2033,10 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `},
-{
-  name: "Anti-Scratch Coating",
-  image: "images/products/Antiscratch.png",
-  description: `<p>
+        {
+          name: "Anti-Scratch Coating",
+          image: "images/products/Antiscratch.png",
+          description: `<p>
   <strong>Anti-Scratch Coatings</strong> are advanced surface protection solutions developed to safeguard materials against scratches, scuffs, and abrasions in today’s demanding industrial and consumer environments. <strong>Concept Enterprises</strong> introduces high-performance anti-scratch coating solutions that enhance surface durability, preserve appearance, and extend product lifespan. These coatings are ideal for industries such as automotive, electronics, eyewear, and construction, where surface protection and aesthetics are critical.
 </p>
 
@@ -2061,11 +2089,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-},
-{
-  name: "Anti-Static Coating",
-  image: "images/products/antistatic.png",
-  description: `<p>
+        },
+        {
+          name: "Anti-Static Coating",
+          image: "images/products/antistatic.png",
+          description: `<p>
   <strong>Anti-Static Coatings</strong> are advanced surface protection solutions designed to control and dissipate static electricity in modern industrial environments. <strong>Concept Enterprises</strong> introduces high-performance anti-static coating solutions that prevent static charge buildup, reduce dust attraction, and enhance operational safety. These coatings are ideal for industries such as electronics, automotive, aerospace, healthcare, and manufacturing, where electrostatic discharge (ESD) can cause serious damage to sensitive equipment and materials.
 </p>
 
@@ -2118,13 +2146,13 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
 `
-}],
+        }],
 
-  "Air Pollution Control System": [
-    {
-      name: "Industrial Blower",
-      image: "images/products/blower.jpg",
-      description: `
+      "Air Pollution Control System": [
+        {
+          name: "Industrial Blower",
+          image: "images/products/blower.jpg",
+          description: `
         <p>
   We <strong>design and manufacture high-performance blowers</strong> for a wide range of industrial applications, fully compliant with current industry standards. At <strong>Concept Enterprises</strong>, creativity and innovation are integral to our engineering culture, enabling us to deliver reliable, efficient, and customized blower solutions.
 </p>
@@ -2172,10 +2200,10 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
-    },{
-      name: "Dust Collector",
-      image: "images/products/dust.jpg",
-      description: `
+        }, {
+          name: "Dust Collector",
+          image: "images/products/dust.jpg",
+          description: `
         <p>
   <strong>Customised Dust Collection System (DCS) / Fume Extraction System</strong> is an advanced air pollution control solution designed to capture and treat harmful particulate matter and fumes generated during manufacturing processes. These systems extract contaminated air from the work environment, filter and purify hazardous fine dust, fumes, and particulate contaminants, and safely release clean air back into the atmosphere.
 </p>
@@ -2223,10 +2251,10 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
   Our customised Dust Collection and Fume Extraction Systems ensure improved workplace safety, regulatory compliance, enhanced process efficiency, and reduced environmental impact, making them an essential solution for modern industrial operations.
 </p>
       `
-    },{
-      name: "Scrubber",
-      image: "images/products/scrubber.jpg",
-      description: `
+        }, {
+          name: "Scrubber",
+          image: "images/products/scrubber.jpg",
+          description: `
         <p>
   <strong>Scrubbers (Dry & Wet)</strong> are advanced air pollution control devices designed to remove particulate matter and harmful gases from industrial exhaust and flue gas streams. These systems play a vital role in controlling emissions and ensuring compliance with environmental regulations.
 </p>
@@ -2261,10 +2289,10 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
   Our scrubber systems are customized to handle corrosive gases, high temperatures, and varying particulate loads. With robust design, reliable operation, and easy maintenance, Concept Enterprises’ dry and wet scrubbers provide effective air pollution control solutions for a wide range of industrial applications.
 </p>
       `
-    },{
-      name: "Cyclone Separator",
-      image: "images/products/cyclone.jpeg",
-      description: `
+        }, {
+          name: "Cyclone Separator",
+          image: "images/products/cyclone.jpeg",
+          description: `
         <p>
   <strong>Cyclone Separator</strong> is an efficient air pollution control and material separation device that operates on the principle of inertia to remove particulate matter from exhaust gas streams. By creating a high-speed rotational airflow, heavier particles are separated from the air stream and collected, while clean air exits through the outlet.
 </p>
@@ -2294,13 +2322,13 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
   Cyclone separators offer a robust, low-maintenance, and cost-effective solution for particulate removal, making them ideal for industries requiring efficient dust control and material separation.
 </p>
 `}
-  ],
+      ],
 
-  "Clean Room": [
-    {
-      name: "HVAC Clean Room",
-      image: "images/products/hvac.jpg",
-      description: `
+      "Clean Room": [
+        {
+          name: "HVAC Clean Room",
+          image: "images/products/hvac.jpg",
+          description: `
         <p>
   <strong>Essential HVAC System Principles</strong><br>
   Heating, Ventilation, and Air Conditioning (HVAC) systems form the backbone of modern buildings, playing a critical role in controlling temperature, humidity, and indoor air quality across residential, commercial, and industrial environments. A well-designed HVAC system is especially vital for maintaining cleanroom conditions, where clean and controlled air is essential for process success. The design of an air distribution system is closely linked to the intended application and performance requirements of the facility.
@@ -2432,11 +2460,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
-    },
-    {
-      name: "Laminar Air Flow",
-      image: "images/products/laminar.jpg",
-      description: `
+        },
+        {
+          name: "Laminar Air Flow",
+          image: "images/products/laminar.jpg",
+          description: `
         <p>
   To carry out specific experiments and processes, many research centers such as clinical, pharmaceutical, environmental, biotechnological, and certain electronics laboratories require sterile and dust-free environments. In such critical areas, <strong>Laminar Air Flow Systems</strong> are used to create a contamination-free working zone by eliminating airborne particles and microorganisms.
 </p>
@@ -2487,11 +2515,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
-    },
-    {
-      name: "Clean Room Equipments",
-      image: "images/products/equipment.jpg",
-      description: `
+        },
+        {
+          name: "Clean Room Equipments",
+          image: "images/products/equipment.jpg",
+          description: `
         <p>
   <strong>Cleanroom Equipment</strong> is widely used across industries such as Biotechnology, Pharmaceuticals, Microelectronics, Laboratories, Semiconductor manufacturing units, and Hospitals, where contamination control and high levels of cleanliness are critical.
 </p>
@@ -2517,10 +2545,10 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
-    },{
-      name: "Hospital Clean Room",
-      image: "images/products/hospital.jpg",
-      description: `
+        }, {
+          name: "Hospital Clean Room",
+          image: "images/products/hospital.jpg",
+          description: `
         <p>
   In simple terms, a <strong>hospital cleanroom</strong> is a controlled environment where airborne and surface contamination is continuously monitored and strictly regulated. These rooms are essential for sensitive processes such as pharmaceutical manufacturing, microprocessor assembly, and critical hospital or scientific research activities.
 </p>
@@ -2559,11 +2587,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
-    },
-    {
-      name: "Pharma Clean Room",
-      image: "images/products/pharma.jpg",
-      description: `
+        },
+        {
+          name: "Pharma Clean Room",
+          image: "images/products/pharma.jpg",
+          description: `
         <p>
   Certain features distinguish high-quality facilities, and <strong>pharmaceutical cold storage construction</strong> plays a vital role in preserving the integrity of pharmaceutical products. Since the effectiveness of sensitive medicines must be maintained, precise temperature control is essential to ensure a stable and uniform storage environment. Advanced insulation materials and seamless construction techniques contribute to optimal thermal efficiency.
 </p>
@@ -2691,11 +2719,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
-    },
-    {
-      name: "Modular Clean Room",
-      image: "images/products/modular.jpg",
-      description: `
+        },
+        {
+          name: "Modular Clean Room",
+          image: "images/products/modular.jpg",
+          description: `
         <p>
   <strong>Modular Cleanrooms</strong> are self-contained controlled environments that use positive pressure systems and advanced filtration to protect processes from harmful airborne contamination. By maintaining a consistent and repeatable environment, modular cleanrooms provide predictable and reliable production performance. These cleanrooms are designed to be dust-free and are primarily used in medical facilities, pharmaceutical laboratories, diagnostic rooms, and research and development centers.
 </p>
@@ -2743,11 +2771,11 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
-    },
-     {
-      name: "Prefabricated Clean Room",
-      image: "images/products/prefabricated.jpg",
-      description: `
+        },
+        {
+          name: "Prefabricated Clean Room",
+          image: "images/products/prefabricated.jpg",
+          description: `
         <p>
   <strong>Prefabricated Cleanrooms</strong> and <strong>Prefabricated Cold Storage Construction</strong> are modern solutions designed to meet the growing demand for controlled environments and temperature-sensitive storage. Prefabricated cold storage construction involves the assembly of insulated structures specifically engineered for low-temperature storage of goods. These units are pre-designed and fabricated off-site, allowing for fast and efficient on-site installation.
 </p>
@@ -2819,104 +2847,109 @@ Flame treatment is used on plastic casings and parts in electronics to ensure st
 </p>
 
       `
+        }
+      ]
+    };
+
+
+
+
+
+
+
+    /* ===== BUILD SIDEBAR ===== */
+    const sidebar = document.getElementById("sidebar");
+
+    Object.keys(products).forEach(category => {
+      const cat = document.createElement("div");
+      cat.className = "category";
+      cat.innerText = category;
+
+      const sub = document.createElement("div");
+      sub.className = "sub-items";
+
+      products[category].forEach((item, index) => {
+        const div = document.createElement("div");
+        div.innerText = item.name;
+        div.onclick = () => openItemDetailByIndex(category, index);
+        sub.appendChild(div);
+      });
+
+      cat.onclick = () => selectCategory(cat, sub, category);
+
+      sidebar.appendChild(cat);
+      sidebar.appendChild(sub);
+    });
+
+    /* ===== CATEGORY CLICK ===== */
+    function selectCategory(cat, sub, category) {
+      document.querySelectorAll(".category").forEach(c => c.classList.remove("active"));
+      document.querySelectorAll(".sub-items").forEach(s => s.style.display = "none");
+
+      cat.classList.add("active");
+      sub.style.display = "block";
+
+      showItems(category);
     }
-  ]
-};
 
+    /* ===== SHOW PRODUCTS ===== */
+    function showItems(category) {
+      document.getElementById("categoryTitle").innerText = category;
+      const grid = document.getElementById("itemsGrid");
+      grid.innerHTML = "";
+      document.getElementById("itemDetail").classList.remove("active");
+      grid.style.display = "grid";
 
-
-
-
-
-
-/* ===== BUILD SIDEBAR ===== */
-const sidebar = document.getElementById("sidebar");
-
-Object.keys(products).forEach(category => {
-  const cat = document.createElement("div");
-  cat.className = "category";
-  cat.innerText = category;
-
-  const sub = document.createElement("div");
-  sub.className = "sub-items";
-
-  products[category].forEach((item, index) => {
-    const div = document.createElement("div");
-    div.innerText = item.name;
-    div.onclick = () => openItemDetailByIndex(category, index);
-    sub.appendChild(div);
-  });
-
-  cat.onclick = () => selectCategory(cat, sub, category);
-
-  sidebar.appendChild(cat);
-  sidebar.appendChild(sub);
-});
-
-/* ===== CATEGORY CLICK ===== */
-function selectCategory(cat, sub, category) {
-  document.querySelectorAll(".category").forEach(c => c.classList.remove("active"));
-  document.querySelectorAll(".sub-items").forEach(s => s.style.display = "none");
-
-  cat.classList.add("active");
-  sub.style.display = "block";
-
-  showItems(category);
-}
-
-/* ===== SHOW PRODUCTS ===== */
-function showItems(category) {
-  document.getElementById("categoryTitle").innerText = category;
-  const grid = document.getElementById("itemsGrid");
-  grid.innerHTML = "";
-  document.getElementById("itemDetail").classList.remove("active");
-  grid.style.display = "grid";
-
-  products[category].forEach((item, index) => {
-    grid.innerHTML += `
+      products[category].forEach((item, index) => {
+        grid.innerHTML += `
       <div class="item-card" onclick="openItemDetailByIndex('${category}', ${index})">
         <img src="${item.image}">
         <h4 style="text-align:center">${item.name}</h4>
         <p style="color:blue; cursor:pointer; text-align:center"> view more</p>
       </div>
     `;
-  });
+      });
 
-  sidebar.classList.remove("open");
-}
+      sidebar.classList.remove("open");
+    }
 
-/* ===== OPEN DETAIL ===== */
-function openItemDetailByIndex(category, index) {
-  const item = products[category][index];
-  openItemDetail(item);
-}
+    /* ===== OPEN DETAIL ===== */
+    function openItemDetailByIndex(category, index) {
+      const item = products[category][index];
+      openItemDetail(item);
+    }
 
-function openItemDetail(item) {
-  document.getElementById("itemsGrid").style.display = "none";
-  const detail = document.getElementById("itemDetail");
-  detail.classList.add("active");
+    function openItemDetail(item) {
+      document.getElementById("itemsGrid").style.display = "none";
+      const detail = document.getElementById("itemDetail");
+      detail.classList.add("active");
 
-  document.getElementById("detailTitle").innerText = item.name;
-  document.getElementById("detailImage").src = item.image;
-  document.getElementById("detailDescription").innerHTML = item.description;
-}
+      document.getElementById("detailTitle").innerText = item.name;
+      document.getElementById("detailImage").src = item.image;
+      document.getElementById("detailDescription").innerHTML = item.description;
+    }
 
-/* ===== BACK ===== */
-function backToList() {
-  document.getElementById("itemDetail").classList.remove("active");
-  document.getElementById("itemsGrid").style.display = "grid";
-}
+    /* ===== BACK ===== */
+    function backToList() {
+      document.getElementById("itemDetail").classList.remove("active");
+      document.getElementById("itemsGrid").style.display = "grid";
+    }
 
-/* ===== MOBILE ===== */
-function toggleMenu() {
-  sidebar.classList.toggle("open");
-}
-function toggleHeaderMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
+    /* ===== MOBILE ===== */
+    /* Mobile sidebar toggle */
+    function toggleMenu() {
+      sidebar.classList.toggle("open");
+    }
 
-</script>
+    /* Header hamburger toggle */
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+    }
+
+  </script>
 
 </body>
-</html>
 
+</html>
